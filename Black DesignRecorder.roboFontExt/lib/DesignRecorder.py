@@ -81,6 +81,7 @@ class MainController(BaseWindowController):
         return self._glypPath(g), g.width
                 
     def closeCallback(self, sender):
+        self.stopRecording()
         removeObserver(self, "fontBecameCurrent")
         removeObserver(self, "currentGlyphChanged")
         
